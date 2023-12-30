@@ -1,0 +1,636 @@
+{
+	"info": {
+		"_postman_id": "21505dc9-d3a6-46e9-8671-ccff8312f3f0",
+		"name": "All API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32040844"
+	},
+	"item": [
+		{
+			"name": "Private",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"jdoe\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Protected route",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/protected-route"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Fetch all users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/users"
+					},
+					"response": []
+				},
+				{
+					"name": "User by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/users/a1234567-89ab-cdef-0123-456789abcdef"
+					},
+					"response": []
+				},
+				{
+					"name": "Create new User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5Mzg0OTUsImV4cCI6MTcwMzk0MjA5NX0.54oZI31HrNhSMc7Y-kyrLEFsRVPCBNDFh5wXRDYC6Us",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"mvkranen\",\r\n    \"name\": \"Michelle van Kranen\",\r\n    \"email\": \"mvkranen@example.com\",\r\n    \"phoneNumber\": \"123-456-7891\",\r\n    \"profilePicture\": \"https://global-uploads.webflow.com/5eecfecbe625d195e35b89f2/624bfb093da7d92733c001c0_Ignacio%20Villafruela%20Rodr%C3%ADguez.jpg\",\r\n    \"password\": \"test123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"628c0eae-3b14-40ae-ac63-b83d82d6bc85\",\r\n    \"username\": \"mvkranen\",\r\n    \"name\": \"Michella van Kranen\",\r\n    \"email\": \"mvkranen@example.com\",\r\n    \"phoneNumber\": \"123-456-7891\",\r\n    \"profilePicture\": \"https://global-uploads.webflow.com/5eecfecbe625d195e35b89f2/624bfb093da7d92733c001c0_Ignacio%20Villafruela%20Rodr%C3%ADguez.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/users/628c0eae-3b14-40ae-ac63-b83d82d6bc85"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/users/628c0eae-3b14-40ae-ac63-b83d82d6bc85"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Fetch all bookings",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/bookings"
+					},
+					"response": []
+				},
+				{
+					"name": "Create new Booking",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"userID\": \"a1234567-89ab-cdef-0123-456789abcdef\",\r\n        \"propertyId\": \"g9012345-67ef-0123-4567-89abcdef0123\",\r\n        \"checkinDate\": \"2023-03-10T18:00:00.000Z\",\r\n        \"checkoutDate\": \"2023-03-15T10:00:00.000Z\",\r\n        \"numberOfGuests\": 2,\r\n        \"totalPrice\": 200,\r\n        \"bookingStatus\": \"confirmed\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/bookings"
+					},
+					"response": []
+				},
+				{
+					"name": "Booking by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/bookings/57aa7804-8d6d-4fd9-9992-27c8cea06522"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Booking",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"userID\": \"a1234567-89ab-cdef-0123-456789abcdef\",\r\n        \"propertyId\": \"g9012345-67ef-0123-4567-89abcdef0123\",\r\n        \"checkinDate\": \"2023-03-10T18:00:00.000Z\",\r\n        \"checkoutDate\": \"2023-03-15T10:00:00.000Z\",\r\n        \"numberOfGuests\": 2,\r\n        \"totalPrice\": 250,\r\n        \"bookingStatus\": \"confirmed\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/bookings/57aa7804-8d6d-4fd9-9992-27c8cea06522"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Booking",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/bookings/57aa7804-8d6d-4fd9-9992-27c8cea06522"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Property",
+			"item": [
+				{
+					"name": "Fetch all properties",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/properties"
+					},
+					"response": []
+				},
+				{
+					"name": "Create new Property",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"hostId\": \"f1234567-89ab-cdef-0123-456789abcdef\",\r\n        \"title\": \"Tipi tent in een weiland.\",\r\n        \"description\": \"Wakker worden tussen de koeien.\",\r\n        \"location\": \"In mijn achtertuin.\",\r\n        \"pricePerNight\": \"230\",\r\n        \"bedroomCount\": 1,\r\n        \"bathRoomCount\": 0,\r\n        \"maxGuestCount\": 2,\r\n        \"rating\": 5\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/properties"
+					},
+					"response": []
+				},
+				{
+					"name": "Property by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/properties/b4ce8e4c-18ff-417f-aded-91eead4315f4"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Property",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"hostId\": \"f1234567-89ab-cdef-0123-456789abcdef\",\r\n        \"title\": \"Tipi tent in een weiland.\",\r\n        \"description\": \"Wakker worden tussen de koeien.\",\r\n        \"location\": \"In mijn achtertuin.\",\r\n        \"pricePerNight\": \"130\",\r\n        \"bedroomCount\": 1,\r\n        \"bathRoomCount\": 0,\r\n        \"maxGuestCount\": 2,\r\n        \"rating\": 5\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/properties/b4ce8e4c-18ff-417f-aded-91eead4315f4"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Property",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/properties/b4ce8e4c-18ff-417f-aded-91eead4315f4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Fetch all reviews",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/reviews"
+					},
+					"response": []
+				},
+				{
+					"name": "Create new Review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"userId\": \"a1234567-89ab-cdef-0123-456789abcdef\",\r\n        \"propertyId\": \"g9012345-67ef-0123-4567-89abcdef0123\",\r\n        \"rating\": 5,\r\n        \"comment\": \"The property was very unique, and the host was very funny!\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/reviews"
+					},
+					"response": []
+				},
+				{
+					"name": "Review by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/reviews/e5a90dce-b88e-4e09-bb1c-d00214e53701"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Review",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"userId\": \"a1234567-89ab-cdef-0123-456789abcdef\",\r\n        \"propertyId\": \"g9012345-67ef-0123-4567-89abcdef0123\",\r\n        \"rating\": 4,\r\n        \"comment\": \"The property was very unique, and the host was very funny!\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/reviews/e5a90dce-b88e-4e09-bb1c-d00214e53701"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Review",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/reviews/e5a90dce-b88e-4e09-bb1c-d00214e53701"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Host",
+			"item": [
+				{
+					"name": "Fetch all hosts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/hosts"
+					},
+					"response": []
+				},
+				{
+					"name": "Create new Host",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"username\": \"Michelle\",\r\n        \"password\": \"Test123\",\r\n        \"name\": \"Michelle\",\r\n        \"email\": \"johndoe@email.com\",\r\n        \"phoneNumber\": \"+11234567890\",\r\n        \"profilePicture\": \"https://example.com/images/johndoe.jpg\",\r\n        \"aboutMe\": \"I'm a passionate traveler who loves to share my home with fellow explorers. Welcome!\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/hosts"
+					},
+					"response": []
+				},
+				{
+					"name": "Host by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/hosts/eba61bb8-dc89-495a-9b84-4ad5bfb714ea"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Host",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"username\": \"Michella\",\r\n        \"password\": \"Test123\",\r\n        \"name\": \"Michelle\",\r\n        \"email\": \"johndoe@email.com\",\r\n        \"phoneNumber\": \"+11234567890\",\r\n        \"profilePicture\": \"https://example.com/images/johndoe.jpg\",\r\n        \"aboutMe\": \"I'm a passionate traveler who loves to share my home with fellow explorers. Welcome!\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/hosts/eba61bb8-dc89-495a-9b84-4ad5bfb714ea"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Host",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/hosts/eba61bb8-dc89-495a-9b84-4ad5bfb714ea"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Amenity",
+			"item": [
+				{
+					"name": "Fetch all Amenities",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/amenities"
+					},
+					"response": []
+				},
+				{
+					"name": "Create new Amenity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"name\": \"Bubbelbad\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/amenities"
+					},
+					"response": []
+				},
+				{
+					"name": "Amenity by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/amenities/e587cc78-1169-4ab0-92dc-2432cb845efe"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Amenity",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"name\": \"Jacuzzi\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/amenities/e587cc78-1169-4ab0-92dc-2432cb845efe"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Amenity",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMTIzNDU2Ny04OWFiLWNkZWYtMDEyMy00NTY3ODlhYmNkZWYiLCJ1c2VybmFtZSI6Impkb2UiLCJpYXQiOjE3MDM5MzE1NjIsImV4cCI6MTcwMzkzNTE2Mn0.YyUm0640uRMf8zJbu13gNzA1oRXYNiXd6yrB5Y4VNgQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/amenities/e587cc78-1169-4ab0-92dc-2432cb845efe"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
